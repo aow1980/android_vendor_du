@@ -16,3 +16,13 @@ PRODUCT_COPY_FILES += \
 # SIM Toolkit
 PRODUCT_PACKAGES += \
     Stk
+
+# Battery
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.hw_power_saving=1 \
+    ro.ril.disable.power.collapse=0 \
+    persist.radio.add_power_save=1 \
+    persist.sys.use_dithering=0 \
+    pm.sleep_mode=1 \
+    power_supply.wakeup=enable \
+    power.saving.mode=1
